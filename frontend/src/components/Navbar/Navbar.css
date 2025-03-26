@@ -1,0 +1,223 @@
+/* General Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+/* Logo Styling */
+.logo {
+  width: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Title Styling */
+.header h1 {
+  color: black;
+  margin-right: 20%;
+  margin-top: 3px;
+  transition: color 0.3s;
+}
+
+/* Navbar Links */
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: black;
+  margin-left: 50px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s;
+}
+ 
+
+/* Button Styling */
+.btn {
+  background-color: transparent;
+  font-size: 16px;
+  margin-left: 40px;
+  border: 1px solid;
+  background-color: #49557e;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle Icon */
+.toggle-icon {
+  width: 40px;
+  cursor: pointer;
+  margin-left: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+/* Theme-based Styling */
+.header-green {
+  background-color: green;
+  color: white;
+}
+
+.header-dark {
+  background-color: #333;
+}
+
+.header-dark .navbar a {
+  color: white;   
+}
+
+.header-dark .navbar a::before {
+  background-color: white;
+}
+
+.header-dark .btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.header-dark h1 {
+  color: white;   
+}
+
+/* Dark Mode Toggle */
+.dark .header {
+  background-color: #222;
+}
+
+.dark .navbar a {
+  color: white;   
+}
+
+.dark .navbar a::before {
+  background-color: white;
+}
+
+.dark .btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.dark .header h1 {
+  color: white;   
+}
+
+.dark .toggle-icon {
+  background-color: #fff;
+}
+.light .toggle-icon{
+  width: 60px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      padding: 10px 5%;
+  }
+
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar a {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  .btn {
+      margin-left: 0;
+      margin-top: 10px;
+  }
+
+  .toggle-icon {
+      margin-left: 0;
+  }
+}
+/* Global styles for light and dark themes */
+
+body.light {
+  background-color: #ffffff;  
+  color: #000000;  
+}
+
+body.dark {
+  background-color: #121212;  
+  color: #ffffff;  
+}
+
+ 
+.header.dark {
+  background-color: #333;  
+}
+
+.navbar a {
+  color: inherit;  
+}
+
+.navbar a:hover {
+  text-decoration: underline;  
+}
+
+.header.dark .navbar a {
+  color: #ffffff;  
+}
+
+.header.dark .navbar a:hover {
+  text-decoration: underline;  
+}
+
+/* Button styles */
+.btn {
+  background-color: #007bff;  
+  color: white;  
+}
+
+.header.dark .btn {
+  background-color: #0056b3;  
+}
+.header.dark .btn:hover {
+  background-color: #0056b3; 
+}
+body.dark h1,
+body.dark p,
+body.dark span,
+body.dark li {
+    color: #ffffff;  
+}
